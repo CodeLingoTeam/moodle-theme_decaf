@@ -104,7 +104,7 @@ function decaf_initialise_awesomebar(moodle_page $page) {
     $page->requires->yui_module('moodle-theme_decaf-awesomebar', 'M.theme_decaf.initAwesomeBar');
 }
 
-function decaf_require_course_login($courseorid, $autologinguest = true, $cm = NULL, $setwantsurltome = true, $preventredirect = true) {
+function decaf_require_course_login($courseorid, $autologinguest = true, $cm = null, $setwantsurltome = true, $preventredirect = true) {
     global $CFG, $SITE;
     $issite = (is_object($courseorid) and $courseorid->id == SITEID)
           or (!is_object($courseorid) and $courseorid == SITEID);
@@ -160,7 +160,7 @@ function decaf_require_course_login($courseorid, $autologinguest = true, $cm = N
     }
 }
 
-function decaf_require_login($courseorid = NULL, $autologinguest = true, $cm = NULL, $setwantsurltome = true, $preventredirect = false) {
+function decaf_require_login($courseorid = null, $autologinguest = true, $cm = null, $setwantsurltome = true, $preventredirect = false) {
     global $CFG, $SESSION, $USER, $FULLME, $DB;
 
     // setup global $COURSE, themes, language and locale
